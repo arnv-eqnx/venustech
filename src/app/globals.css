@@ -10,6 +10,15 @@
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
 }
+
+.navBarHeading{
+  transition: transform 0.3s ease;
+}
+
+.navBarHeading:hover{
+  animation: liftupAnimation 0.3s forwards ease;
+}
+
 .heroBackground{
   background: url('../assets/bg.png');
   position: absolute;
@@ -26,10 +35,30 @@
   background-color: rgba(255, 255, 255, 0.25);
 }
 
+.heroContent h1{
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(-45deg, white, aqua, skyblue, #7B9192, #40709E, #499D16,#CD5397 , #0A2789, skyblue, aqua, white);
+  background-size: 400% 400%;
+  animation: textGradientAnimation 5s ease-in-out infinite;
+}
+
 .button-white-nav{
   background-color: rgba(255, 255, 255, 0.25);
   padding: 12px;
   border-radius: 15px;
+}
+
+.button-white-nav:hover{
+  background-color: #9966FF;
+  transition: background-color 0.3s ease-in;
+  animation: liftupAnimation 0.3s forwards ease;
+}
+
+.button-white-nav:not(:hover) {
+  transition: transform 0.3s ease; /* Apply a transition for smooth reversion */
+  transform: translateY(0);
 }
 
 .button-white{
@@ -54,8 +83,21 @@
   opacity: 0.5;
 }
 
+.statText{
+  font-size: 6rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(45deg, black,maroon, darkblue );
+  animation: textGradientAnimation 3s ease-in-out infinite;
+}
+
+.statText span{
+  font-size: 3rem;
+}
+
 .features-bg{
-  background: url('../assets/bg.png');
+  background: url('../assets/bg4.png');
   position: absolute;
   left: 0;
 
@@ -65,8 +107,49 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
 }
+
+.featuresCard{
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.benefitsCard{
+  background-color: white;
+  box-shadow: 0px 0px 30px 5px rgba(37, 37, 37, 0.08);
+}
+
+.useCases{
+  box-shadow: 0px 0px 30px 5px rgba(37, 37, 37, 0.2);
+}
+
+.learnMore:hover{
+  color: #9966FF;
+  transition: color 100ms ease-in;
+}
+
+
+
+@keyframes textGradientAnimation {
+  0%{
+    background-position: 0 0;
+  }
+
+  100%{
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes liftupAnimation{
+    0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-5px); 
+  }
+}
+
+
 
 /* .fill{
   overflow: hidden;
