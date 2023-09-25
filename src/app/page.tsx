@@ -218,7 +218,7 @@ export default function Home() {
               <Image src={w3} width={50} alt='w1' />
               <div>
                 <h1 className='text-2xl font-bold -mt-4'>2. Analyse conversations</h1>
-                <p className='mt-2'>Check answers and adjust your AI bot. Add questions from your support requests, check the answer and edit if needed. ioni will self learn and automatically improve auto responses.</p>
+                <p className='mt-2~'>Check answers and adjust your AI bot. Add questions from your support requests, check the answer and edit if needed. ioni will self learn and automatically improve auto responses.</p>
               </div>
             </div>
           </div>
